@@ -9,8 +9,8 @@
 
 ##### 参考
 
-  * https://github.com/foreverzmy/FE-interview/blob/master/README.md#doctype%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%BE%E4%BE%8B%E5%B8%B8%E8%A7%81doctype%E5%8F%8A%E7%89%B9%E7%82%B9
-  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#doctype%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8
+  * [FE-interview](https://github.com/foreverzmy/FE-interview/blob/master/README.md#doctype%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%BE%E4%BE%8B%E5%B8%B8%E8%A7%81doctype%E5%8F%8A%E7%89%B9%E7%82%B9)
+  * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#doctype%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8)
 
 ### 什么是 web 语义化,有什么好处？
 
@@ -27,7 +27,7 @@
 
 ##### 参考
 
-  * https://github.com/foreverzmy/FE-interview/blob/master/README.md#%E4%BB%80%E4%B9%88%E6%98%AFweb%E8%AF%AD%E4%B9%89%E5%8C%96%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84
+  * [FE-interview](https://github.com/foreverzmy/FE-interview/blob/master/README.md#%E4%BB%80%E4%B9%88%E6%98%AFweb%E8%AF%AD%E4%B9%89%E5%8C%96%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84)
 
 ### HTML 全局属性(global attribute)有哪些?
 
@@ -50,8 +50,8 @@
 
 ##### 参考
 
-  * https://github.com/foreverzmy/FE-interview/blob/master/README.md#html%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7global-attribute%E6%9C%89%E5%93%AA%E4%BA%9B
-  * https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
+  * [FE-interview](https://github.com/foreverzmy/FE-interview/blob/master/README.md#html%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7global-attribute%E6%9C%89%E5%93%AA%E4%BA%9B)
+  * [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
   * http://www.w3.org/TR/html-markup/global-attributes.html#common.attrs.core
 
 ### 什么是 `data-` 属性？
@@ -62,7 +62,7 @@
 
 ##### 参考
 
-  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E4%BB%80%E4%B9%88%E6%98%AFdata-%E5%B1%9E%E6%80%A7
+  * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E4%BB%80%E4%B9%88%E6%98%AFdata-%E5%B1%9E%E6%80%A7)
   * http://html5doctor.com/html5-custom-data-attributes/
   * https://www.w3.org/TR/html5/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes
 
@@ -79,8 +79,8 @@
 
 ##### 参考
 
-  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E5%B0%86-html5-%E7%9C%8B%E4%BD%9C%E6%88%90%E5%BC%80%E6%94%BE%E7%9A%84%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0%E4%BB%80%E4%B9%88%E6%98%AF-html5-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E4%BB%B6building-block
-  * https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
+  * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E5%B0%86-html5-%E7%9C%8B%E4%BD%9C%E6%88%90%E5%BC%80%E6%94%BE%E7%9A%84%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0%E4%BB%80%E4%B9%88%E6%98%AF-html5-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E4%BB%B6building-block)
+  * [MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 
 ### 请描述 cookie、sessionStorage 和 localStorage 的区别。
 
@@ -98,8 +98,8 @@
 
 ##### 参考
   
-  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E8%AF%B7%E6%8F%8F%E8%BF%B0cookiesessionstorage%E5%92%8Clocalstorage%E7%9A%84%E5%8C%BA%E5%88%AB
-  * https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+  * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E8%AF%B7%E6%8F%8F%E8%BF%B0cookiesessionstorage%E5%92%8Clocalstorage%E7%9A%84%E5%8C%BA%E5%88%AB)
+  * [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
   * http://tutorial.techaltum.com/local-and-session-storage.html
 
 ### 请描述 `<script>`、`<script async>` 和 `<script defer>` 的区别。
@@ -111,9 +111,9 @@
 注意：没有 `src` 属性的脚本，`async` 和 `defer` 属性会被忽略。
 
 ###### 参考
-* https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E8%AF%B7%E6%8F%8F%E8%BF%B0scriptscript-async%E5%92%8Cscript-defer%E7%9A%84%E5%8C%BA%E5%88%AB
+* [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E8%AF%B7%E6%8F%8F%E8%BF%B0scriptscript-async%E5%92%8Cscript-defer%E7%9A%84%E5%8C%BA%E5%88%AB)
+* [stackoverflow](https://stackoverflow.com/questions/10808109/script-tag-async-defer)
 * http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
-* https://stackoverflow.com/questions/10808109/script-tag-async-defer
 * https://bitsofco.de/async-vs-defer/
 
 ### 为什么最好把CSS的 `<link>` 标签放在 `<head></head>` 之间？为什么最好把 JS 的 `<script>` 标签恰好放在 `</body>` 之前，有例外情况吗？
@@ -130,7 +130,7 @@
 
 ##### 参考
 
-  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%A5%BD%E6%8A%8Acss%E7%9A%84link%E6%A0%87%E7%AD%BE%E6%94%BE%E5%9C%A8headhead%E4%B9%8B%E9%97%B4%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%A5%BD%E6%8A%8Ajs%E7%9A%84script%E6%A0%87%E7%AD%BE%E6%81%B0%E5%A5%BD%E6%94%BE%E5%9C%A8body%E4%B9%8B%E5%89%8D%E6%9C%89%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5%E5%90%97
+  * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%A5%BD%E6%8A%8Acss%E7%9A%84link%E6%A0%87%E7%AD%BE%E6%94%BE%E5%9C%A8headhead%E4%B9%8B%E9%97%B4%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%A5%BD%E6%8A%8Ajs%E7%9A%84script%E6%A0%87%E7%AD%BE%E6%81%B0%E5%A5%BD%E6%94%BE%E5%9C%A8body%E4%B9%8B%E5%89%8D%E6%9C%89%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5%E5%90%97)
   * https://developer.yahoo.com/performance/rules.html#css_top
 
 ### `<img>` 的 `title` 和 `alt` 属性有什么区别？
@@ -141,4 +141,4 @@
 
 ##### 参考
 
-  * https://github.com/foreverzmy/FE-interview/blob/master/README.md#img%E7%9A%84title%E5%92%8Calt%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB
+  * [FE-interview](https://github.com/foreverzmy/FE-interview/blob/master/README.md#img%E7%9A%84title%E5%92%8Calt%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
