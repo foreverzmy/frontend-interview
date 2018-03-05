@@ -142,3 +142,12 @@
 ##### 参考
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview/blob/master/README.md#img%E7%9A%84title%E5%92%8Calt%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
+
+### 为什么在 `<img>` 标签中使用 `srcset` 属性？请描述浏览器遇到该属性后的处理过程。
+
+  `srcset` 属性可以根据设备显示宽度向用户提供不同的图像-为具有视网膜显示的设备提供更高质量的图像，增强用户体验，同时向低端设备提供低分辨率图像，从而提高性能并减少数据浪费（因为提供更大的图像不会有任何明显的差异）。
+
+##### 参考链接
+
+  * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/questions/html-questions.md#why-you-would-use-a-srcset-attribute-in-an-image-tag-explain-the-process-the-browser-uses-when-evaluating-the-content-of-this-attribute)
+  * http://www.zhangxinxu.com/wordpress/2014/10/responsive-images-srcset-size-w-descriptor/
