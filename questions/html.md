@@ -31,7 +31,6 @@
 
 ### HTML 全局属性(global attribute)有哪些?
 
-参考资料：[MDN: html global attribute](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes) 或者 [W3C HTML global-attributes](http://www.w3.org/TR/html-markup/global-attributes.html#common.attrs.core)
 * accesskey: 设置快捷键，提供快速访问元素如 `accesskey="c"` 在 windows 下按 `alt + shift + c` 可激活元素
 * class: 为元素设置类标识，多个类名用空格分开，CSS 和 JavaScript 可通过 `class` 属性获取元素;
 * contenteditable: 指定元素内容是否可编辑;
@@ -52,6 +51,8 @@
 ##### 参考
 
   * https://github.com/foreverzmy/FE-interview/blob/master/README.md#html%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7global-attribute%E6%9C%89%E5%93%AA%E4%BA%9B
+  * https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes
+  * http://www.w3.org/TR/html-markup/global-attributes.html#common.attrs.core
 
 ### 什么是 `data-` 属性？
 
@@ -117,11 +118,11 @@
 
 ### 为什么最好把CSS的 `<link>` 标签放在 `<head></head>` 之间？为什么最好把 JS 的 `<script>` 标签恰好放在 `</body>` 之前，有例外情况吗？
 
-#### 把 `<link>` 放在 `<head>` 中
+#### 把 `<link>` 放在 `<head>` 中：
 
 把 `<link>` 标签放在 `<head></head>` 之间是规范要求的内容。此外，这种做法可以让页面逐步呈现，提高了用户体验。将样式表放在文档底部附近，会使许多浏览器（包括 IE）不能逐步呈现页面。一些浏览器会阻止渲染，以避免在页面样式发生变化时，重新绘制页面中的元素。这种做法可以防止呈现给用户空白的页面或没有样式的内容。
 
-#### 把 `<script>` 标签恰好放在 `</body>` 之前
+#### 把 `<script>` 标签恰好放在 `</body>` 之前：
 
 脚本在下载和执行期间会阻止 HTML 解析。把 `<script>` 标签放在底部，保证 HTML 首先完成解析，将页面尽早呈现给用户。
 
@@ -135,6 +136,7 @@
 ### `<img>` 的 `title` 和 `alt` 属性有什么区别？
 
 `title` 是 global attributes 之一，用于为元素提供附加的 advisory information。通常当鼠标滑动到元素上的时候显示。
+
 `alt` 是 `<img>` 的特有属性，是图片内容的等价描述，用于图片无法加载时显示、读屏器阅读图片。可提图片高可访问性，除了纯装饰图片外都必须设置有意义的值，搜索引擎会重点分析。
 
 ##### 参考
