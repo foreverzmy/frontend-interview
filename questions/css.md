@@ -73,3 +73,18 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 ##### 参考
 
   * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/css-questions.md#css-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E7%9A%84)
+
+### css sprite 是什么,有什么优缺点？
+
+概念：将多个小图片拼接到一个图片中。通过background-position和元素尺寸调节需要显示的背景图案。
+
+优点：
+
+  1. 减少HTTP请求数，极大地提高页面加载速度;
+  2. 增加图片信息重复度，提高压缩比，减少图片大小;
+  3.更换风格方便，只需在一张或几张图片上修改颜色或样式即可实现;
+
+缺点：
+
+  1. 图片合并麻烦;
+  2. 维护麻烦，修改一个图片可能需要从新布局整个图片，样式;
