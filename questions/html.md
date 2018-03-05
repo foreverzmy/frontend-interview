@@ -1,5 +1,4 @@
-
-
+# HTML 题目
 
 ### doctype 是什么，有什么作用？
 
@@ -7,6 +6,11 @@
 2. `<!doctype>` 声明必须处于 HTML 文档的头部，在 `<html>` 标签之前，HTML5 中不区分大小写;
 3. `<!doctype>` 声明不是一个 HTML 标签，是一个用于告诉浏览器当前HTMl版本的指令;
 4. 现代浏览器的 html 布局引擎通过检查 doctype 决定使用兼容模式还是标准模式对文档进行渲染，一些浏览器有一个接近标准模型;
+
+##### 参考
+
+  * https://github.com/foreverzmy/FE-interview/blob/master/README.md#doctype%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%BE%E4%BE%8B%E5%B8%B8%E8%A7%81doctype%E5%8F%8A%E7%89%B9%E7%82%B9
+  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#doctype%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8
 
 ### 什么是 web 语义化,有什么好处？
 
@@ -20,6 +24,10 @@
   * 盲人使用读屏器更好地阅读;
   * 搜索引擎更好地理解页面，有利于收录;
   * 便团队项目的可持续运作及维护;
+
+##### 参考
+
+  * https://github.com/foreverzmy/FE-interview/blob/master/README.md#%E4%BB%80%E4%B9%88%E6%98%AFweb%E8%AF%AD%E4%B9%89%E5%8C%96%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84
 
 ### HTML 全局属性(global attribute)有哪些?
 
@@ -41,11 +49,21 @@
 * title: 元素相关的建议信息;
 * translate: 元素和子孙节点内容是否需要本地化;
 
+##### 参考
+
+  * https://github.com/foreverzmy/FE-interview/blob/master/README.md#html%E5%85%A8%E5%B1%80%E5%B1%9E%E6%80%A7global-attribute%E6%9C%89%E5%93%AA%E4%BA%9B
+
 ### 什么是 `data-` 属性？
 
 在 JavaScript 框架变得流行之前，前端开发者经常使用 `data-` 属性，把额外数据存储在 DOM 自身中。当时没有其他 Hack 手段（比如使用非标准属性或 DOM 上额外属性）。这样做是为了将自定义数据存储到页面或应用中，对此没有其他更适当的属性或元素。
 
 而现在，不鼓励使用 `data-` 属性。原因之一是，用户可以通过在浏览器中利用检查元素，轻松地修改属性值，借此修改数据。数据模型最好存储在 JavaScript 本身中，并利用框架提供的数据绑定，使之与 DOM 保持更新。
+
+##### 参考
+
+  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E4%BB%80%E4%B9%88%E6%98%AFdata-%E5%B1%9E%E6%80%A7
+  * http://html5doctor.com/html5-custom-data-attributes/
+  * https://www.w3.org/TR/html5/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes
 
 ### 将 HTML5 看作成开放的网络平台，什么是 HTML5 的基本构件（building block）？
 
@@ -60,6 +78,7 @@
 
 ##### 参考
 
+  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E5%B0%86-html5-%E7%9C%8B%E4%BD%9C%E6%88%90%E5%BC%80%E6%94%BE%E7%9A%84%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0%E4%BB%80%E4%B9%88%E6%98%AF-html5-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E4%BB%B6building-block
   * https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5
 
 ### 请描述 cookie、sessionStorage 和 localStorage 的区别。
@@ -76,6 +95,12 @@
 | 容量（每个域名）                                | 4kb                                          | 5MB            | 5MB              |
 | 访问权限                                       | 任意窗口                                      | 任意窗口        | 当前页面窗口       |
 
+##### 参考
+  
+  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E8%AF%B7%E6%8F%8F%E8%BF%B0cookiesessionstorage%E5%92%8Clocalstorage%E7%9A%84%E5%8C%BA%E5%88%AB
+  * https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
+  * http://tutorial.techaltum.com/local-and-session-storage.html
+
 ### 请描述 `<script>`、`<script async>` 和 `<script defer>` 的区别。
 
 `<script>` - HTML 解析中断，脚本被提取并立即执行。执行结束后，HTML 解析继续。
@@ -86,8 +111,9 @@
 
 ###### 参考
 * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E8%AF%B7%E6%8F%8F%E8%BF%B0scriptscript-async%E5%92%8Cscript-defer%E7%9A%84%E5%8C%BA%E5%88%AB
-* https://stackoverflow.com/questions/33651166/what-is-progressive-rendering
-* http://www.ebaytechblog.com/2014/12/08/async-fragments-rediscovering-progressive-html-rendering-with-marko/
+* http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
+* https://stackoverflow.com/questions/10808109/script-tag-async-defer
+* https://bitsofco.de/async-vs-defer/
 
 ### 为什么最好把CSS的 `<link>` 标签放在 `<head></head>` 之间？为什么最好把 JS 的 `<script>` 标签恰好放在 `</body>` 之前，有例外情况吗？
 
@@ -102,9 +128,15 @@
 例外情况是当你的脚本里包含 `document.write()` 时。但是现在，`document.write()`不推荐使用。同时，将 `<script>` 标签放在底部，意味着浏览器不能开始下载脚本，直到整个文档（document）被解析。也许，对此比较好的做法是，`<script>` 使用 `defer` 属性，放在 `<head>` 中。
 
 ##### 参考
+
+  * https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%A5%BD%E6%8A%8Acss%E7%9A%84link%E6%A0%87%E7%AD%BE%E6%94%BE%E5%9C%A8headhead%E4%B9%8B%E9%97%B4%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%A5%BD%E6%8A%8Ajs%E7%9A%84script%E6%A0%87%E7%AD%BE%E6%81%B0%E5%A5%BD%E6%94%BE%E5%9C%A8body%E4%B9%8B%E5%89%8D%E6%9C%89%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5%E5%90%97
   * https://developer.yahoo.com/performance/rules.html#css_top
 
 ### `<img>` 的 `title` 和 `alt` 属性有什么区别？
 
 `title` 是 global attributes 之一，用于为元素提供附加的 advisory information。通常当鼠标滑动到元素上的时候显示。
 `alt` 是 `<img>` 的特有属性，是图片内容的等价描述，用于图片无法加载时显示、读屏器阅读图片。可提图片高可访问性，除了纯装饰图片外都必须设置有意义的值，搜索引擎会重点分析。
+
+##### 参考
+
+  * https://github.com/foreverzmy/FE-interview/blob/master/README.md#img%E7%9A%84title%E5%92%8Calt%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB
