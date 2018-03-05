@@ -1,16 +1,4 @@
 
-## SEO
-
-### 前端需要注意哪些SEO
-
-1. 合理的 title、description、keywords：搜索对着三项的权重逐个减小，title 值强调重点即可，重要关键词出现不要超过 2 次，而且要靠前，不同页面 title 要有所不同；description 把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面 description 有所不同；keywords 列举出重要关键词即可;
-2. 语义化的 HTML 代码，符合 W3C 规范：语义化代码让搜索引擎容易理解网页;
-3. 重要内容 HTML 代码放在最前：搜索引擎抓取 HTML 顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取;
-4. 重要内容不要用 js 输出：爬虫不会执行 js 获取内容;
-5. 少用 iframe：搜索引擎不会抓取 iframe 中的内;容
-6. 非装饰性图片必须加 alt;
-7. 提高网站速度：网站速度是搜索引擎排序的一个重要指标;
-
 ## 性能
 
 ### 什么是渐进式渲染（progressive rendering）？
@@ -31,6 +19,34 @@
   * [stackoverflow](https://stackoverflow.com/questions/33651166/what-is-progressive-rendering)
   * [ebaytechblog](http://www.ebaytechblog.com/2014/12/08/async-fragments-rediscovering-progressive-html-rendering-with-marko/)
 
-## 网络
+
+## SEO
+
+### 前端需要注意哪些SEO
+
+1. 合理的 title、description、keywords：搜索对着三项的权重逐个减小，title 值强调重点即可，重要关键词出现不要超过 2 次，而且要靠前，不同页面 title 要有所不同；description 把页面内容高度概括，长度合适，不可过分堆砌关键词，不同页面 description 有所不同；keywords 列举出重要关键词即可;
+2. 语义化的 HTML 代码，符合 W3C 规范：语义化代码让搜索引擎容易理解网页;
+3. 重要内容 HTML 代码放在最前：搜索引擎抓取 HTML 顺序是从上到下，有的搜索引擎对抓取长度有限制，保证重要内容一定会被抓取;
+4. 重要内容不要用 js 输出：爬虫不会执行 js 获取内容;
+5. 少用 iframe：搜索引擎不会抓取 iframe 中的内;容
+6. 非装饰性图片必须加 alt;
+7. 提高网站速度：网站速度是搜索引擎排序的一个重要指标;
+
+
+### 什么是渐进增强
+
+渐进增强是指在 web 设计时强调可访问性、语义化 HTML 标签、外部样式表和脚本。保证所有人都能访问页面的基本内容和功能同时为高级浏览器和高带宽用户提供更好的用户体验。核心原则如下:
+
+  * 所有浏览器都必须能访问基本内容
+  * 所有浏览器都必须能使用基本功能
+  * 所有内容都包含在语义化标签中
+  * 通过外部 CSS 提供增强的布局
+  * 通过非侵入式、外部 javascript 提供增强功能
+  * 尊重终端用户网页浏览器偏好
+
+##### 参考
+
+  * [FE-interview](https://github.com/foreverzmy/FE-interview/blob/master/README.md#%E4%BB%80%E4%B9%88%E6%98%AF%E6%B8%90%E8%BF%9B%E5%A2%9E%E5%BC%BA)
+
 
 ## 算法
