@@ -4,7 +4,6 @@
 
 ### Q: CSS 选择器有哪些？
 
-
 | 选择器               |	例子	                 | 例子描述	                                    |CSS版本| 兼容性 |
 |---------------------|-----------------------|---------------------------------------------|:----:|:-----:|
 | *                   | *                     | 选择所有元素,**不参与计算优先级**                | 2  | IE6+ |
@@ -74,15 +73,17 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
   * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/css-questions.md#css-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E7%9A%84)
 
+## 概念
+
 ### Q: css sprite 是什么,有什么优缺点？
 
-概念：将多个小图片拼接到一个图片中。通过background-position和元素尺寸调节需要显示的背景图案。
+概念：将多个小图片拼接到一个图片中。通过 `background-position` 和元素尺寸调节需要显示的背景图案。
 
 优点：
 
-  1. 减少HTTP请求数，极大地提高页面加载速度;
+  1. 减少HTTP请求数，极大地提高页面加载速度，但是对于 HTTP2 而言，加载多张图片不再是问题;
   2. 增加图片信息重复度，提高压缩比，减少图片大小;
-  3.更换风格方便，只需在一张或几张图片上修改颜色或样式即可实现;
+  3. 更换风格方便，只需在一张或几张图片上修改颜色或样式即可实现;
 
 缺点：
 
@@ -124,6 +125,45 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 2. 不被浮动元素覆盖;
 3. 阻止父子元素的 `margin` 折叠;
 
+### Q: 容器包含若干浮动元素时如何清理(包含)浮动？
+
+1. 容器元素闭合标签前添加额外元素并设置 `clear: both`;
+2. 父元素触发块级格式化上下文(见块级可视化上下文部分);
+3. 设置容器元素伪元素进行清理
+
+推荐的清理浮动方法：
+
+```css
+/**
+* 在标准浏览器下使用
+* 1 content内容为空格用于修复opera下文档中出现
+*   contenteditable属性时在清理浮动元素上下的空白
+* 2 使用display使用table而不是block：可以防止容器和
+*   子元素top-margin折叠,这样能使清理效果与BFC，IE6/7
+*   zoom: 1;一致
+**/
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+.clearfix:after {
+    clear: both;
+}
+/**
+* IE 6/7下使用
+* 通过触发hasLayout实现包含浮动
+**/
+.clearfix {
+    *zoom: 1;
+}
+```
+
+##### 参考
+
+  * [A new micro clearfix hack](http://nicolasgallagher.com/micro-clearfix-hack/)
+  * [FE-interview](https://github.com/foreverzmy/FE-interview#%E5%AE%B9%E5%99%A8%E5%8C%85%E5%90%AB%E8%8B%A5%E5%B9%B2%E6%B5%AE%E5%8A%A8%E5%85%83%E7%B4%A0%E6%97%B6%E5%A6%82%E4%BD%95%E6%B8%85%E7%90%86%E5%8C%85%E5%90%AB%E6%B5%AE%E5%8A%A8)
+
 ### `display: none;` 与 `visibility: hidden;` 的区别。
 
 联系：它们都能让元素不可见
@@ -164,7 +204,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview#display-block%E5%92%8Cdisplay-inline%E7%9A%84%E5%8C%BA%E5%88%AB)
 
-### Q: display,float,position的关系
+### Q: `display`, `float`, `position` 的关系。
 
 1. 如果 `display` 为 `none`，那么 `position` 和 `float` 都不起作用，这种情况下元素不产生框;
 2. 否则，如果 `position` 值为 `absolute` 或者 `fixed`，框就是绝对定位的，`float` 的计算值为 `none`，`display`根据下面的表格进行调整;
