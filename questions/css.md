@@ -2,7 +2,7 @@
 
 ## CSS 选择器
 
-### CSS 选择器有哪些？
+### Q: CSS 选择器有哪些？
 
 
 | 选择器               |	例子	                 | 例子描述	                                    |CSS版本| 兼容性 |
@@ -56,7 +56,7 @@
   * [w3school](http://www.w3school.com.cn/cssref/css_selectors.asp)
   * [FE-interview](https://github.com/foreverzmy/FE-interview#css%E9%80%89%E6%8B%A9%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B)
 
-### CSS 选择器的优先级是如何计算的？
+### Q: CSS 选择器的优先级是如何计算的？
 
 浏览器通过优先级规则，判断元素展示哪些样式。优先级通过 4 个维度指标确定，我们假定以 a、b、c、d 命名，分别代表以下含义：
 
@@ -74,7 +74,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
   * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/css-questions.md#css-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E7%9A%84)
 
-### css sprite 是什么,有什么优缺点？
+### Q: css sprite 是什么,有什么优缺点？
 
 概念：将多个小图片拼接到一个图片中。通过background-position和元素尺寸调节需要显示的背景图案。
 
@@ -89,7 +89,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
   1. 图片合并麻烦;
   2. 维护麻烦，修改一个图片可能需要从新布局整个图片，样式;
 
-### `link` 与 `@import` 的区别？
+### Q: `link` 与 `@import` 的区别？
 
 1. `link`是 HTML 方式， `@import` 是 CSS 方式;
 2. `link` 最大限度支持并行下载，`@import` 过多嵌套导致串行下载，出现 [`FOUC`](https://github.com/foreverzmy/frontend-interview/blob/master/questions/css.md#%E4%BB%80%E4%B9%88%E6%98%AF-fouc%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D);
@@ -102,14 +102,13 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview#link%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB)
 
-
-### 什么是 FOUC？如何避免？
+### Q: 什么是 FOUC？如何避免？
 
 (Flash of Unstyled Content:文档样式短暂失效)：用户定义样式表加载之前浏览器使用默认样式显示文档，用户样式加载渲染之后再从新显示文档，造成页面闪烁。
 
 **解决方法**：把样式表放到文档的 `head` 标签中;
 
-### 如何创建块级格式化上下文(block formatting context),BFC 有什么用?
+### Q: 如何创建块级格式化上下文(block formatting context),BFC 有什么用?
 
 创建规则：
 
@@ -140,7 +139,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview#display-none%E4%B8%8Evisibility-hidden%E7%9A%84%E5%8C%BA%E5%88%AB)
 
-### `display: block;` 和 `display: inline;` 的区别。
+### Q: `display: block;` 和 `display: inline;` 的区别。
 
 `block` 元素特点：
 
@@ -164,3 +163,22 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 ##### 参考
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview#display-block%E5%92%8Cdisplay-inline%E7%9A%84%E5%8C%BA%E5%88%AB)
+
+### Q: display,float,position的关系
+
+1. 如果 `display` 为 `none`，那么 `position` 和 `float` 都不起作用，这种情况下元素不产生框;
+2. 否则，如果 `position` 值为 `absolute` 或者 `fixed`，框就是绝对定位的，`float` 的计算值为 `none`，`display`根据下面的表格进行调整;
+3. 否则，如果 `float` 不是 `none`，框是浮动的，`display` 根据下表进行调整;
+4. 否则，如果元素是根元素，`display` 根据下表进行调整;
+5. 其他情况下 `display` 的值为指定值;
+总结起来：**绝对定位、浮动、根元素都需要调整 `display` **。
+
+|Specified value|Computed value|
+|---------------|--------------|
+| inline-table | table |
+| inline, table-row-group, table-column, table-comput-group, table-header-group, table-footer-group, table-row, table-cell, table-caption, inline-block | block |
+| others | same as specified |
+
+##### 参考
+
+  * [FE-interview](https://github.com/foreverzmy/FE-interview#displayfloatposition%E7%9A%84%E5%85%B3%E7%B3%BB)

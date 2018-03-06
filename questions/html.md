@@ -1,6 +1,6 @@
 # HTML 题目
 
-### doctype 是什么，有什么作用？
+### Q: doctype 是什么，有什么作用？
 
 1. DOCTYPE是 “document type” 的缩写。它是 HTML 中用来区分标准模式和怪异模式的声明，用来告知浏览器使用标准模式渲染页面;
 2. `<!doctype>` 声明必须处于 HTML 文档的头部，在 `<html>` 标签之前，HTML5 中不区分大小写;
@@ -12,7 +12,7 @@
   * [FE-interview](https://github.com/foreverzmy/FE-interview/blob/master/README.md#doctype%E6%98%AF%E4%BB%80%E4%B9%88%E4%B8%BE%E4%BE%8B%E5%B8%B8%E8%A7%81doctype%E5%8F%8A%E7%89%B9%E7%82%B9)
   * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#doctype%E6%9C%89%E4%BB%80%E4%B9%88%E7%94%A8)
 
-### 什么是 web 语义化,有什么好处？
+### Q: 什么是 web 语义化,有什么好处？
 
 语义化是前端开发里面的一个专用术语，其优点在于标签语义化有助于构架良好的 html 结构，有利于搜索引擎的建立索引、抓取；另外，亦有利于页面在不同的设备上显示尽可能相同；此外，亦有利于构建清晰的机构，有利于团队的开发、维护。
 
@@ -29,7 +29,7 @@
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview/blob/master/README.md#%E4%BB%80%E4%B9%88%E6%98%AFweb%E8%AF%AD%E4%B9%89%E5%8C%96%E6%9C%89%E4%BB%80%E4%B9%88%E5%A5%BD%E5%A4%84)
 
-### HTML 全局属性(global attribute)有哪些?
+### Q: HTML 全局属性(global attribute)有哪些?
 
 * accesskey: 设置快捷键，提供快速访问元素如 `accesskey="c"` 在 windows 下按 `alt + shift + c` 可激活元素
 * class: 为元素设置类标识，多个类名用空格分开，CSS 和 JavaScript 可通过 `class` 属性获取元素;
@@ -54,7 +54,7 @@
   * [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes)
   * http://www.w3.org/TR/html-markup/global-attributes.html#common.attrs.core
 
-### 什么是 `data-` 属性？
+### Q: 什么是 `data-` 属性？
 
 在 JavaScript 框架变得流行之前，前端开发者经常使用 `data-` 属性，把额外数据存储在 DOM 自身中。当时没有其他 Hack 手段（比如使用非标准属性或 DOM 上额外属性）。这样做是为了将自定义数据存储到页面或应用中，对此没有其他更适当的属性或元素。
 
@@ -66,7 +66,7 @@
   * http://html5doctor.com/html5-custom-data-attributes/
   * https://www.w3.org/TR/html5/dom.html#embedding-custom-non-visible-data-with-the-data-*-attributes
 
-### 将 HTML5 看作成开放的网络平台，什么是 HTML5 的基本构件（building block）？
+### Q: 将 HTML5 看作成开放的网络平台，什么是 HTML5 的基本构件（building block）？
 
 * 语义 - 提供更准确地描述内容;
 * 连接 - 提供新的方式与服务器通信;
@@ -82,7 +82,7 @@
   * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E5%B0%86-html5-%E7%9C%8B%E4%BD%9C%E6%88%90%E5%BC%80%E6%94%BE%E7%9A%84%E7%BD%91%E7%BB%9C%E5%B9%B3%E5%8F%B0%E4%BB%80%E4%B9%88%E6%98%AF-html5-%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%9E%84%E4%BB%B6building-block)
   * [MDN](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 
-### 请描述 cookie、sessionStorage 和 localStorage 的区别。
+### Q: 请描述 cookie、sessionStorage 和 localStorage 的区别。
 
 上面提到的技术名词，都是在客户端以键值对存储的存储机制，并且只能将值存储为字符串。
 
@@ -102,7 +102,7 @@
   * [MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
   * http://tutorial.techaltum.com/local-and-session-storage.html
 
-### 请描述 `<script>`、`<script async>` 和 `<script defer>` 的区别。
+### Q: 请描述 `<script>`、`<script async>` 和 `<script defer>` 的区别。
 
 `<script>` - HTML 解析中断，脚本被提取并立即执行。执行结束后，HTML 解析继续。
 `<script async>` - 脚本的提取、执行的过程与 HTML 解析过程并行，脚本执行完毕可能在 HTML 解析完毕之前。当脚本与页面上其他脚本独立时，可以使用 `async`，比如用作页面统计分析。
@@ -116,7 +116,7 @@
 * http://www.growingwiththeweb.com/2014/02/async-vs-defer-attributes.html
 * https://bitsofco.de/async-vs-defer/
 
-### 为什么最好把CSS的 `<link>` 标签放在 `<head></head>` 之间？为什么最好把 JS 的 `<script>` 标签恰好放在 `</body>` 之前，有例外情况吗？
+### Q: 为什么最好把CSS的 `<link>` 标签放在 `<head></head>` 之间？为什么最好把 JS 的 `<script>` 标签恰好放在 `</body>` 之前，有例外情况吗？
 
 #### 把 `<link>` 放在 `<head>` 中：
 
@@ -133,7 +133,7 @@
   * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/html-questions.md#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%A5%BD%E6%8A%8Acss%E7%9A%84link%E6%A0%87%E7%AD%BE%E6%94%BE%E5%9C%A8headhead%E4%B9%8B%E9%97%B4%E4%B8%BA%E4%BB%80%E4%B9%88%E6%9C%80%E5%A5%BD%E6%8A%8Ajs%E7%9A%84script%E6%A0%87%E7%AD%BE%E6%81%B0%E5%A5%BD%E6%94%BE%E5%9C%A8body%E4%B9%8B%E5%89%8D%E6%9C%89%E4%BE%8B%E5%A4%96%E6%83%85%E5%86%B5%E5%90%97)
   * https://developer.yahoo.com/performance/rules.html#css_top
 
-### `<img>` 的 `title` 和 `alt` 属性有什么区别？
+### Q: `<img>` 的 `title` 和 `alt` 属性有什么区别？
 
 `title` 是 global attributes 之一，用于为元素提供附加的 advisory information。通常当鼠标滑动到元素上的时候显示。
 
@@ -143,7 +143,7 @@
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview/blob/master/README.md#img%E7%9A%84title%E5%92%8Calt%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB)
 
-### 为什么在 `<img>` 标签中使用 `srcset` 属性？请描述浏览器遇到该属性后的处理过程。
+### Q: 为什么在 `<img>` 标签中使用 `srcset` 属性？请描述浏览器遇到该属性后的处理过程。
 
   `srcset` 属性可以根据设备显示宽度向用户提供不同的图像-为具有视网膜显示的设备提供更高质量的图像，增强用户体验，同时向低端设备提供低分辨率图像，从而提高性能并减少数据浪费（因为提供更大的图像不会有任何明显的差异）。
 
