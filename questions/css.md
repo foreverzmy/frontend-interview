@@ -73,7 +73,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
   * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/css-questions.md#css-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E7%9A%84)
 
-## 概念
+## 概念和基础
 
 ### Q: css sprite 是什么,有什么优缺点？
 
@@ -222,3 +222,128 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 ##### 参考
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview#displayfloatposition%E7%9A%84%E5%85%B3%E7%B3%BB)
+
+## 布局
+
+### Q: 如何实现水平居中一个元素？
+
+* 如果需要居中的元素为 **常规流中 `inline` 元素**，为父元素设置 `text-align:center;` 即可实现;
+
+* 如果需要居中的元素为 **常规流中 `block` 元素**:
+
+    1. 为元素设置宽度;
+    2. 设置左右 `margin` 为 `auto`;
+    3. IE6下需在父元素上设置 `text-align:center;`,再给子元素恢复需要的值;
+
+    ```html
+    <body>
+      <div class="content">
+        aaaaaa aaaaaa a a a a a a a a
+      </div>
+    </body>
+
+    <style>
+      body {
+        background: #DDD;
+        text-align: center; /* 3 */
+      }
+      .content {
+        width: 500px;      /* 1 */
+        text-align: left;  /* 3 */
+        margin: 0 auto;    /* 2 */
+        background: purple;
+      }
+    </style>
+    ```
+
+* 如果需要居中的元素为 **浮动元素**:
+
+    1. 为元素设置宽度;
+    2. `position: relative;`;
+    3. 浮动方向偏移量（left或者right）设置为50%;
+    4. 浮动方向上的 `margin` 设置为元素宽度一半乘以-1;
+
+    ```html
+    <body>
+      <div class="content">
+        aaaaaa aaaaaa a a a a a a a a
+      </div>
+    </body>
+    <style>
+      body {
+        background: #DDD;
+      }
+      .content {
+        width: 500px;         /* 1 */
+        float: left;
+        position: relative;   /* 2 */
+        left: 50%;            /* 3 */
+        margin-left: -250px;  /* 4 */
+        background-color: purple;
+      }
+    </style>
+    ```
+
+* 如果需要居中的元素为 **绝对定位元素**:
+
+    1. 为元素设置宽度;
+    2. 偏移量设置为 50%; 
+    3. 偏移方向外边距设置为元素宽度一半乘以 -1;
+
+    ```html
+    <body>
+      <div class="content">
+        aaaaaa aaaaaa a a a a a a a a
+      </div>
+    </body>
+    <style>
+      body {
+        background: #DDD;
+        position: relative;
+      }
+      .content {
+        width: 800px;
+        position: absolute;
+        left: 50%;
+        margin-left: -400px;
+        background-color: purple;
+      }
+    </style>
+    ```
+
+* 如果需要居中的元素为绝对定位元素;
+
+    1. 为元素设置宽度;
+    2. 设置左右偏移量都为 0;
+    3. 设置左右外边距都为 `auto`;
+
+    ```html
+    <body>
+      <div class="content">
+        aaaaaa aaaaaa a a a a a a a a
+      </div>
+    </body>
+    <style>
+      body {
+        background: #DDD;
+        position: relative;
+      }
+      .content {
+        width: 800px;
+        position: absolute;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        background-color: purple;
+      }
+    </style>
+    ```
+
+##### 参考
+
+  * [FE-interview](https://github.com/foreverzmy/FE-interview#%E5%A6%82%E4%BD%95%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0)
+
+### Q: 如何实现垂直居中一个元素？
+
+* [6 Methods For Vertical Centering With CSS](http://www.vanseodesign.com/css/vertical-centering/)
+* [盘点8种CSS实现垂直居中水平居中的绝对定位居中技术](http://blog.csdn.net/freshlover/article/details/11579669)
