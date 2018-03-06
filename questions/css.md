@@ -1,6 +1,6 @@
 # CSS
 
-## CSS 选择器
+## CSS 选择器和属性
 
 ### Q: CSS 选择器有哪些？
 
@@ -73,6 +73,25 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
   * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/css-questions.md#css-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E7%9A%84)
 
+
+### Q: CSS有哪些继承属性
+
+- 关于文字排版的属性如：
+  +  [font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
+  +  [word-break](https://developer.mozilla.org/en-US/docs/Web/CSS/word-break)
+  +  [letter-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/letter-spacing)
+  +  [text-align](https://developer.mozilla.org/en-US/docs/Web/CSS/text-align)
+  +  [text-rendering](https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering)
+  +  [word-spacing](https://developer.mozilla.org/en-US/docs/Web/CSS/word-spacing)
+  +  [white-space](https://developer.mozilla.org/en-US/docs/Web/CSS/white-space)
+  +  [text-indent](https://developer.mozilla.org/en-US/docs/Web/CSS/text-indent)
+  +  [text-transform](https://developer.mozilla.org/en-US/docs/Web/CSS/text-transform)
+  +  [text-shadow](https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow)
+- [line-height](https://developer.mozilla.org/en-US/docs/Web/CSS/line-height)
+- [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
+- [visibility](https://developer.mozilla.org/en-US/docs/Web/CSS/visibility)
+- [cursor](https://developer.mozilla.org/en-US/docs/Web/CSS/cursor)
+
 ## 概念和基础
 
 ### Q: css sprite 是什么,有什么优缺点？
@@ -105,7 +124,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
 ### Q: 什么是 FOUC？如何避免？
 
-(Flash of Unstyled Content:文档样式短暂失效)：用户定义样式表加载之前浏览器使用默认样式显示文档，用户样式加载渲染之后再从新显示文档，造成页面闪烁。
+(Flash of Unstyled Content: 文档样式短暂失效)：用户定义样式表加载之前浏览器使用默认样式显示文档，用户样式加载渲染之后再从新显示文档，造成页面闪烁。
 
 **解决方法**：把样式表放到文档的 `head` 标签中;
 
@@ -223,7 +242,35 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview#displayfloatposition%E7%9A%84%E5%85%B3%E7%B3%BB)
 
+### Q: 如何确定一个元素的包含块 (containing block)?
+
+1. 根元素的包含块叫做初始包含块，在连续媒体中他的尺寸与 viewport 相同并且 anchored at the canvas origin；对于 paged media，它的尺寸等于 page area。初始包含块的 direction 属性与根元素相同;
+2. `position` 为 `relative` 或者 `static` 的元素，它的包含块由最近的块级（`display` 为 `block`, `list-item`, `table`）祖先元素的**内容框**组成;
+3. 如果元素 `position` 为 `fixed`。对于连续媒体，它的包含块为 viewport；对于 paged media，包含块为 page area;
+4. 如果元素 `position` 为 `absolute`，它的包含块由祖先元素中最近一个 `position` 为 `relative`, `absolute` 或者 `fixed` 的元素产生，规则如下：
+    - 如果祖先元素为行内元素，包含块是围绕该元素生成的第一个和最后一个行内框的**padding boxes**的边界块;
+    - 其他情况下包含块由祖先节点的**padding edge**组成;
+    - 如果找不到定位的祖先元素，包含块为**初始包含块**;
+
+
 ## 布局
+
+### Q: stacking context（层叠上下文）的布局规则？
+
+z 轴上的默认层叠顺序如下（从下到上）：
+
+    1. 根元素的边界和背景;
+    2. 常规流中的元素按照 html 中顺序;
+    3. 浮动块;
+    4. `positioned` 元素按照 html 中出现顺序;
+
+如何创建 stacking context：
+
+    1. 根元素;
+    2. `z-index` 不为 auto 的定位元素;
+    3. `z-index` 不为 auto 的 flex 元素;
+    4. `opacity` 小于 1 的元素;
+    5. 在移动端 webkit 和 chrome22+，`z-index:auto; position:fixed;` 也将创建新的 stacking context;
 
 ### Q: 如何实现水平居中一个元素？
 
