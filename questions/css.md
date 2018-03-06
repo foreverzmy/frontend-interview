@@ -92,7 +92,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 ### `link` 与 `@import` 的区别？
 
 1. `link`是 HTML 方式， `@import` 是 CSS 方式;
-2. `link` 最大限度支持并行下载，`@import` 过多嵌套导致串行下载，出现 `FOUC`;
+2. `link` 最大限度支持并行下载，`@import` 过多嵌套导致串行下载，出现 [`FOUC`](https://github.com/foreverzmy/frontend-interview/blob/master/questions/css.md#%E4%BB%80%E4%B9%88%E6%98%AF-fouc%E5%A6%82%E4%BD%95%E9%81%BF%E5%85%8D);
 3. `link` 可以通过 `rel="alternate stylesheet"` 指定候选样式;
 4. 浏览器对 `link` 支持早于 `@import`，可以使用 `@import` 对老浏览器隐藏样式;
 5. `@import` 必须在样式规则之前，可以在 css 文件中引用其他文件;
