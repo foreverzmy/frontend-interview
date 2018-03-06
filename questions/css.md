@@ -52,8 +52,8 @@
 
 ##### 参考
 
-  * [w3school](http://www.w3school.com.cn/cssref/css_selectors.asp)
-  * [FE-interview](https://github.com/foreverzmy/FE-interview#css%E9%80%89%E6%8B%A9%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B)
+* [w3school](http://www.w3school.com.cn/cssref/css_selectors.asp)
+* [FE-interview](https://github.com/foreverzmy/FE-interview#css%E9%80%89%E6%8B%A9%E5%99%A8%E6%9C%89%E5%93%AA%E4%BA%9B)
 
 ### Q: CSS 选择器的优先级是如何计算的？
 
@@ -71,7 +71,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
 ##### 参考
 
-  * [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/css-questions.md#css-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E7%9A%84)
+* [front-end-interview-handbook](https://github.com/yangshun/front-end-interview-handbook/blob/master/Translations/Chinese/questions/css-questions.md#css-%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E4%BC%98%E5%85%88%E7%BA%A7%E6%98%AF%E5%A6%82%E4%BD%95%E8%AE%A1%E7%AE%97%E7%9A%84)
 
 
 ### Q: CSS有哪些继承属性
@@ -120,7 +120,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
 ##### 参考
 
-  * [FE-interview](https://github.com/foreverzmy/FE-interview#link%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB)
+* [FE-interview](https://github.com/foreverzmy/FE-interview#link%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB)
 
 ### Q: 什么是 FOUC？如何避免？
 
@@ -139,7 +139,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
 ##### 参考
 
-    * [FE-interview](https://github.com/foreverzmy/FE-interview#%E5%A4%96%E8%BE%B9%E8%B7%9D%E6%8A%98%E5%8F%A0collapsing-margins)
+* [FE-interview](https://github.com/foreverzmy/FE-interview#%E5%A4%96%E8%BE%B9%E8%B7%9D%E6%8A%98%E5%8F%A0collapsing-margins)
 
 ### Q: 如何创建块级格式化上下文(block formatting context),BFC 有什么用?
 
@@ -209,7 +209,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
 ##### 参考
 
-  * [FE-interview](https://github.com/foreverzmy/FE-interview#display-none%E4%B8%8Evisibility-hidden%E7%9A%84%E5%8C%BA%E5%88%AB)
+* [FE-interview](https://github.com/foreverzmy/FE-interview#display-none%E4%B8%8Evisibility-hidden%E7%9A%84%E5%8C%BA%E5%88%AB)
 
 ### Q: `display: block;` 和 `display: inline;` 的区别。
 
@@ -234,7 +234,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
 ##### 参考
 
-  * [FE-interview](https://github.com/foreverzmy/FE-interview#display-block%E5%92%8Cdisplay-inline%E7%9A%84%E5%8C%BA%E5%88%AB)
+* [FE-interview](https://github.com/foreverzmy/FE-interview#display-block%E5%92%8Cdisplay-inline%E7%9A%84%E5%8C%BA%E5%88%AB)
 
 ### Q: `display`, `float`, `position` 的关系。
 
@@ -253,7 +253,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
 ##### 参考
 
-  * [FE-interview](https://github.com/foreverzmy/FE-interview#displayfloatposition%E7%9A%84%E5%85%B3%E7%B3%BB)
+* [FE-interview](https://github.com/foreverzmy/FE-interview#displayfloatposition%E7%9A%84%E5%85%B3%E7%B3%BB)
 
 ### Q: 如何确定一个元素的包含块 (containing block)?
 
@@ -401,7 +401,7 @@ z 轴上的默认层叠顺序如下（从下到上）：
 
 ##### 参考
 
-  * [FE-interview](https://github.com/foreverzmy/FE-interview#%E5%A6%82%E4%BD%95%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0)
+* [FE-interview](https://github.com/foreverzmy/FE-interview#%E5%A6%82%E4%BD%95%E6%B0%B4%E5%B9%B3%E5%B1%85%E4%B8%AD%E4%B8%80%E4%B8%AA%E5%85%83%E7%B4%A0)
 
 ### Q: 如何实现垂直居中一个元素？
 
