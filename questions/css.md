@@ -89,6 +89,19 @@ d 表示标签（类型）选择器和伪元素选择器之和。
   1. 图片合并麻烦;
   2. 维护麻烦，修改一个图片可能需要从新布局整个图片，样式;
 
+### `link` 与 `@import` 的区别？
+
+1. `link`是 HTML 方式， `@import` 是 CSS 方式;
+2. `link` 最大限度支持并行下载，`@import` 过多嵌套导致串行下载，出现 `FOUC` (Flash of Unstyled Content:文档样式短暂失效);
+3. `link` 可以通过 `rel="alternate stylesheet"` 指定候选样式;
+4. 浏览器对 `link` 支持早于 `@import`，可以使用 `@import` 对老浏览器隐藏样式;
+5. `@import` 必须在样式规则之前，可以在 css 文件中引用其他文件;
+6. 总体来说：`link` 优于 `@import`;
+
+##### 参考
+
+  * [FE-interview](https://github.com/foreverzmy/FE-interview#link%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB)
+
 ### `display: none;` 与 `visibility: hidden;` 的区别。
 
 联系：它们都能让元素不可见
