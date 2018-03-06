@@ -92,7 +92,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 ### `link` 与 `@import` 的区别？
 
 1. `link`是 HTML 方式， `@import` 是 CSS 方式;
-2. `link` 最大限度支持并行下载，`@import` 过多嵌套导致串行下载，出现 `FOUC` (Flash of Unstyled Content:文档样式短暂失效);
+2. `link` 最大限度支持并行下载，`@import` 过多嵌套导致串行下载，出现 `FOUC`;
 3. `link` 可以通过 `rel="alternate stylesheet"` 指定候选样式;
 4. 浏览器对 `link` 支持早于 `@import`，可以使用 `@import` 对老浏览器隐藏样式;
 5. `@import` 必须在样式规则之前，可以在 css 文件中引用其他文件;
@@ -101,6 +101,29 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 ##### 参考
 
   * [FE-interview](https://github.com/foreverzmy/FE-interview#link%E4%B8%8Eimport%E7%9A%84%E5%8C%BA%E5%88%AB)
+
+
+### 什么是 FOUC？如何避免？
+
+(Flash of Unstyled Content:文档样式短暂失效)：用户定义样式表加载之前浏览器使用默认样式显示文档，用户样式加载渲染之后再从新显示文档，造成页面闪烁。
+
+**解决方法**：把样式表放到文档的 `head` 标签中;
+
+### 如何创建块级格式化上下文(block formatting context),BFC 有什么用?
+
+创建规则：
+
+1. 根元素;
+2. 浮动元素（`float` 不是 `none`）;
+3. 绝对定位元素（`position` 取值为 `absolute` 或 `fixed`）;
+4. `display` 取值为 `inline-block`, `table-cell`, `table-caption`, `flex`, `inline-flex` 之一的元素;
+5. `overflow` 不是 `visible` 的元素;
+
+作用：
+
+1. 可以包含浮动元素;
+2. 不被浮动元素覆盖;
+3. 阻止父子元素的 `margin` 折叠;
 
 ### `display: none;` 与 `visibility: hidden;` 的区别。
 
@@ -115,7 +138,7 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
 ##### 参考
 
-  *[FE-interview](https://github.com/foreverzmy/FE-interview#display-none%E4%B8%8Evisibility-hidden%E7%9A%84%E5%8C%BA%E5%88%AB)
+  * [FE-interview](https://github.com/foreverzmy/FE-interview#display-none%E4%B8%8Evisibility-hidden%E7%9A%84%E5%8C%BA%E5%88%AB)
 
 ### `display: block;` 和 `display: inline;` 的区别。
 
@@ -134,6 +157,10 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 3. 受 `white-space` 控制;
 4. `margin/padding` 在竖直方向上无效，水平方向上有效;
 5. `width/height` 属性对非替换行内元素无效，宽度由元素内容决定;
-6. 非替换行内元素的行框高由 `line-height` 确定，替换行内元素的行框高由 `height`,`margin`,`padding`,`border` 决定;
+6. 非替换行内元素的行框高由 `line-height` 确定，替换行内元素的行框高由 `height`, `margin`, `padding`, `border` 决定;
 6. 浮动或绝对定位时会转换为 `block`;
 7. `vertical-align` 属性生效;
+
+##### 参考
+
+  * [FE-interview](https://github.com/foreverzmy/FE-interview#display-block%E5%92%8Cdisplay-inline%E7%9A%84%E5%8C%BA%E5%88%AB)
