@@ -128,6 +128,19 @@ d 表示标签（类型）选择器和伪元素选择器之和。
 
 **解决方法**：把样式表放到文档的 `head` 标签中;
 
+### Q: 什么事外边距折叠(collapsing margins)？
+
+毗邻的两个或多个 `margin` 会合并成一个margin，叫做外边距折叠。规则如下：
+
+1. 两个或多个毗邻的普通流中的块元素垂直方向上的 `margin` 会折叠;
+2. 浮动元素、`inline-block` 元素、绝对定位元素的 `margin` 不会和垂直方向上的其他元素的 margin 折叠;
+3. 创建了块级格式化上下文的元素，不会和它的子元素发生 `margin` 折叠;
+4. 元素自身的 `margin-bottom` 和 `margin-top` 相邻时也会折叠;
+
+##### 参考
+
+    * [FE-interview](https://github.com/foreverzmy/FE-interview#%E5%A4%96%E8%BE%B9%E8%B7%9D%E6%8A%98%E5%8F%A0collapsing-margins)
+
 ### Q: 如何创建块级格式化上下文(block formatting context),BFC 有什么用?
 
 创建规则：
