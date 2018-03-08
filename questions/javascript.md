@@ -61,3 +61,75 @@ ParseDom(str);
 // <div>item1</div>  
 // <div>item2</div>  
 ```
+
+### EventEmitter 的实现
+
+```js
+class EventEmitter {
+  constructor() {
+    this.eventList = {};
+    this.onceEventList = {};
+  }
+
+  // 多次触发
+  on(event, handler) {
+    if (!this.eventList.hasOwnProperty(event)) {
+      this.eventList[event] = [];
+    }
+    this.eventList[event].push(handler);
+  }
+
+  // 只触发一次
+  once(event, handler) {
+    this.onceEventList[event] = handler;
+  }
+
+  // 触发特定事件
+  fire(obj) {
+    if (this.eventList.hasOwnProperty(obj.type)) {
+      this.eventList[obj.type].forEach(handler => {
+        handler(obj.value)
+      })
+    }
+
+    if (this.onceEventList.hasOwnProperty(obj.type)) {
+      this.onceEventList[obj.type](obj.value);
+      delete this.onceEventList[obj.type];
+    }
+
+  }
+
+  // 移除特定的事件的处理函数
+  off(event, handler) {
+    if (this.eventList.hasOwnProperty(event.type)) {
+      let handlers = this.eventList[event.type].filter(fn => fn === handler);
+      this.eventList[obj.type] = handlers;
+    }
+    if (this.onceEventList.hasOwnProperty(event.type)) {
+      if (this.onceEventList[event] === handler) {
+        delete this.eventList[obj.type];
+      }
+    }
+
+  }
+
+}
+
+const emitter = new EventEmitter();
+
+const handler = function (evt) {
+  console.log(1, evt);
+}
+
+emitter.on('foo', handler);
+
+emitter.once('foo', function (evt) {
+  console.log(2, evt);
+})
+
+emitter.fire({ type: 'foo', value: 'hello' });
+emitter.fire({ type: 'foo', value: 'world' });
+emitter.off('foo', handler);
+emitter.fire({ type: 'foo', value: 'test' })
+```
+
