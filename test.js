@@ -1,11 +1,39 @@
-let template = '我是{{name}}，年龄{{age}}，性别{{sex}}';
 let data = {
-  name: '姓名',
-  age: 18
+  name: 'jack',
+  child: [
+    { name: 'jack1' },
+    {
+      name: 'jack2',
+      child: [{
+        name: 'jack2-1',
+        child: { name: 'jack2-1-1' }
+      }, {
+        name: 'jack2-2'
+      }]
+    },
+    {
+      name: 'jack3',
+      child: { name: 'jack3-1' }
+    }
+  ]
 }
 
-console.log(render(template, data));
+function findMultiChildPerson(data) {
+  let list = [data];
+  let nameList = [];
 
-function render(template, data) {
-  return template.replace(new RegExp('{{(.*?)}}', 'g'), (match, key) => data[key.trim()]);
+  while (list.length > 0) {
+    const obj = list.shift();
+    if (obj.hasOwnProperty('child')) {
+      if (Array.isArray(obj.child)) {
+        nameList.push(obj.name);
+        list = list.concat(obj.child);
+      } else {
+        list.push(obj.child);
+      }
+    }
+  }
+  return nameList;
 }
+
+console.log(findMultiChildPerson(data))

@@ -44,7 +44,7 @@ function parseParam(url) {
 }
 ```
 
-### Q：模板渲染
+### Q: 模板渲染
 
 实现一个简单的模板引擎：
 
@@ -84,3 +84,113 @@ render(template, data); // 我是姓名，年龄18，性别undefined
 ##### 参考 
 
 [一行代码实现一个简单的模板字符串替换](http://mp.weixin.qq.com/s/lHiyoZ4J-OsT6L1gg-xvwQ)
+
+### Q: 数据绑定最基本的实现
+
+```js
+// 实现一个方法，可以给 obj 所有的属性添加动态绑定事件，当属性值发生变化时会触发事件
+let obj = {
+  key_1: 1,
+  key_2: 2
+}
+function func(key) {
+  console.log(key + ' 的值发生改变：' + this[key]);
+}
+bindData(obj, func);
+obj.key_1 = 2; // 此时自动输出 "key_1 的值发生改变：2"
+obj.key_2 = 1; // 此时自动输出 "key_2 的值发生改变：1"
+```
+
+答：
+
+```js
+function bindData(obj, fn) {
+  for (let key in obj) {
+    Object.defineProperty(obj, key, {
+      set(newVal) {
+        if (this.value !== newVal) {
+          this.value = newVal;
+          fn.call(obj, key);
+        }
+      },
+      get() {
+        return this.value;
+      }
+    })
+  }
+}
+```
+
+### Q: 数据结构处理
+
+有一个祖先树状 json 对象，当一个人有一个儿子的时候，其 child 为其儿子对象，如果有多个儿子，child 为儿子对象的数组。
+
+请实现一个函数，找出这个家族中所有有多个儿子的人的名字（name），输出一个数组。
+
+```js
+// 样例数据
+let data = {
+  name: 'jack',
+  child: [
+    { name: 'jack1' },
+    {
+      name: 'jack2',
+      child: [{
+        name: 'jack2-1',
+        child: { name: 'jack2-1-1' }
+      }, {
+        name: 'jack2-2'
+      }]
+    },
+    {
+      name: 'jack3',
+      child: { name: 'jack3-1' }
+    }
+  ]
+}
+```
+
+答案：
+
+* 用递归
+
+    ```js
+    function findMultiChildPerson(data) {
+      let nameList = [];
+
+      function tmp(data) {
+        if (data.hasOwnProperty('child')) {
+          if (Array.isArray(data.child)) {
+            nameList.push(data.name);
+            data.child.forEach(child => tmp(child));
+          } else {
+            tmp(data.child);
+          }
+        }
+      }
+      tmp(data);
+      return nameList;
+    }
+    ```
+
+* 非递归
+
+    ```js
+    function findMultiChildPerson(data) {
+      let list = [data];
+      let nameList = [];
+
+      while (list.length > 0) {
+        const obj = list.shift();
+        if (obj.hasOwnProperty('child')) {
+          if (Array.isArray(obj.child)) {
+            nameList.push(obj.name);
+            list = list.concat(obj.child);
+          } else {
+            list.push(obj.child);
+          }
+        }
+      }
+      return nameList;
+    }
+    ```
