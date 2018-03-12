@@ -85,6 +85,51 @@ render(template, data); // 我是姓名，年龄18，性别undefined
 
 [一行代码实现一个简单的模板字符串替换](http://mp.weixin.qq.com/s/lHiyoZ4J-OsT6L1gg-xvwQ)
 
+
+### Q: 字符串查找
+
+请使用最基本的遍历来实现判断字符串 a 是否被包含在字符串 b 中，并返回第一次出现的位置（找不到返回 -1）。
+
+例子：
+
+```js
+a='34';b='1234567'; // 返回 2
+a='35';b='1234567'; // 返回 -1
+a='355';b='12354355'; // 返回 5
+isContain(a,b);
+```
+
+答案：
+
+```js
+function isContain(a, b) {
+  for (let i in b) {
+    if (a[0] === b[i]) {
+      let tmp = true;
+      for (let j in a) {
+        if (a[j] !== b[~~i + ~~j]) {
+          tmp = false;
+        }
+      }
+      if (tmp) {
+        return i;
+      }
+    }
+  }
+  return -1;
+}
+```
+
+### Q：将一个任意长的数字变成逗号分割的格式
+
+例子：
+
+```js
+parseToMoney(1234.56); // return '1,234.56'
+parseToMoney(123456789); // return '123,456,789'
+parseToMoney(1087654.321); // return '1,087,654.321'
+```
+
 ### Q: 数据绑定最基本的实现
 
 ```js
