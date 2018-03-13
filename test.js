@@ -1,39 +1,10 @@
-let data = {
-  name: 'jack',
-  child: [
-    { name: 'jack1' },
-    {
-      name: 'jack2',
-      child: [{
-        name: 'jack2-1',
-        child: { name: 'jack2-1-1' }
-      }, {
-        name: 'jack2-2'
-      }]
-    },
-    {
-      name: 'jack3',
-      child: { name: 'jack3-1' }
-    }
-  ]
+console.log(parseToMoney(1234.56)); // return '1,234.56'
+console.log(parseToMoney(123456789)); // return '123,456,789'
+console.log(parseToMoney(1087654.321)); // return '1,087,654.321'
+
+function parseToMoney(num) {
+  num = parseFloat(num.toFixed(3));
+  let [integer, decimal] = String.prototype.split.call(num, '.');
+  integer = integer.replace(/\d(?=(\d{3})+$)/g, '$&,');
+  return integer + '.' + (decimal ? decimal : '');
 }
-
-function findMultiChildPerson(data) {
-  let list = [data];
-  let nameList = [];
-
-  while (list.length > 0) {
-    const obj = list.shift();
-    if (obj.hasOwnProperty('child')) {
-      if (Array.isArray(obj.child)) {
-        nameList.push(obj.name);
-        list = list.concat(obj.child);
-      } else {
-        list.push(obj.child);
-      }
-    }
-  }
-  return nameList;
-}
-
-console.log(findMultiChildPerson(data))

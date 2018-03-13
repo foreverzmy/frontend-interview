@@ -16,7 +16,7 @@ parseParam(url)
 */
 ```
 
-答案：
+答：
 
 ```js
 function parseParam(url) {
@@ -44,9 +44,9 @@ function parseParam(url) {
 }
 ```
 
-### Q: 模板渲染
+### 模板渲染
 
-实现一个简单的模板引擎：
+Q: 实现一个简单的模板引擎：
 
 ```js
 let template = '我是{{name}}，年龄{{age}}，性别{{sex}}';
@@ -85,6 +85,56 @@ render(template, data); // 我是姓名，年龄18，性别undefined
 
 [一行代码实现一个简单的模板字符串替换](http://mp.weixin.qq.com/s/lHiyoZ4J-OsT6L1gg-xvwQ)
 
+Q: 实现一个简单的虚拟 DOM 渲染
+
+```js
+let domNode = {
+  tagName: 'ul',
+  props: { class: 'list' },
+  children: [{
+    tagName: 'li',
+    children: ['item1']
+  }, {
+    tagName: 'li',
+    children: ['item1']
+  }]
+};
+
+// 构建一个 render 函数，将 domNode 对象渲染为 以下 dom
+<ul class="list">
+    <li>item1</li>
+    <li>item2</li>
+</ul>
+```
+
+答案：
+
+```js
+function render(domNode) {
+  if (!domNode) return document.createDocumentFragment();
+  let $el
+  if (typeof domNode === 'object') {
+    $el = document.createElement(domNode.tagName);
+
+    if (domNode.hasOwnProperty('props')) {
+      for (let key in domNode.props) {
+        $el.setAttribute(key, domNode.props[key]);
+      }
+    }
+
+    if (domNode.hasOwnProperty('children')) {
+      domNode.children.forEach(val => {
+        const $childEl = render(val);
+        $el.appendChild($childEl);
+      })
+    }
+  } else {
+    $el = document.createTextNode(domNode);
+  }
+
+  return $el;
+}
+```
 
 ### Q: 字符串查找
 
@@ -125,9 +175,21 @@ function isContain(a, b) {
 例子：
 
 ```js
+// 保留三位小数
 parseToMoney(1234.56); // return '1,234.56'
 parseToMoney(123456789); // return '123,456,789'
 parseToMoney(1087654.321); // return '1,087,654.321'
+```
+
+答：
+
+```js
+function parseToMoney(num) {
+  num = parseFloat(num.toFixed(3));
+  let [integer, decimal] = String.prototype.split.call(num, '.');
+  integer = integer.replace(/\d(?=(\d{3})+$)/g, '$&,');
+  return integer + '.' + (decimal ? decimal : '');
+}
 ```
 
 ### Q: 数据绑定最基本的实现
